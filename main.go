@@ -59,14 +59,14 @@ func getLatestReleaseTag() (string, error) {
 }
 
 func updateDockerCompose() error {
-	cmd := exec.Command("docker-compose", "-f", composeFile, "pull")
+	cmd := exec.Command("docker", "compose", "-f", composeFile, "pull")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	if err := cmd.Run(); err != nil {
 		return err
 	}
 
-	cmd = exec.Command("docker-compose", "-f", composeFile, "up", "-d")
+	cmd = exec.Command("docker", "compose", "-f", composeFile, "up", "-d")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
