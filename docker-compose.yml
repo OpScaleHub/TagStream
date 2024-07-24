@@ -1,6 +1,6 @@
 services:
   web:
-    image: nginx:stable-alpine
+    image: nginx:stable
     restart: always
     ports:
       - 8080:80
