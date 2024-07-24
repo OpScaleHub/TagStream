@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Variables
-GITHUB_REPO="username/repository"
+GITHUB_REPO="OpScaleHub/TagStream"
 COMPOSE_FILE="docker-compose.yml"
 
 # Get the latest release tag from GitHub
